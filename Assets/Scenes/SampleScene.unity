@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
-  fullDayLength: 10
+  fullDayLength: 30
   startTime: 0.4
   noon: {x: 90, y: 0, z: 0}
   sun: {fileID: 705507994}
@@ -566,18 +566,6 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  lightingIntensityMultiplier:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reflectionsIntensityMultiplier:
-    serializedVersion: 2
-    m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
