@@ -20,10 +20,6 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] private Gradient moonColor;
     [SerializeField] private AnimationCurve moonIntensity;
 
-    [Header("Other Light")]
-    [SerializeField] private AnimationCurve lightingIntensityMultiplier;
-    [SerializeField] private AnimationCurve reflectionsIntensityMultiplier;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -36,15 +32,6 @@ public class DayNightCycle : MonoBehaviour
     {
         // increment time
         time += timeRate * Time.deltaTime;
-
-        /* if (time >= .75f)
-        {
-            RenderSettings.sun = moon;
-        }
-        else if (time >= .25f)
-        {
-            RenderSettings.sun = sun;
-        } */
 
         if (time >= 1f)
             time = 0f;
@@ -70,19 +57,5 @@ public class DayNightCycle : MonoBehaviour
         // light color
         sun.color = sunColor.Evaluate(time);
         moon.color = moonColor.Evaluate(time);
-
-        // enable/disable sun
-        /*if (sun.intensity == 0 && sun.gameObject.activeInHierarchy)
-            sun.gameObject.SetActive(false);
-        else if (sun.intensity > 0 && !sun.gameObject.activeInHierarchy)
-            sun.gameObject.SetActive(true);
-
-        if (moon.intensity == 0 && moon.gameObject.activeInHierarchy)
-            moon.gameObject.SetActive(false);
-        else if (moon.intensity > 0 && !moon.gameObject.activeInHierarchy)
-            moon.gameObject.SetActive(true);*/
-
-        // RenderSettings.ambientIntensity = lightingIntensityMultiplier.Evaluate(time);
-        // RenderSettings.reflectionIntensity = reflectionsIntensityMultiplier.Evaluate(time);
     }
 }
